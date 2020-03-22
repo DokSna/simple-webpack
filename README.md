@@ -49,6 +49,17 @@ git push -u origin master
 
 ## По умолчанию, Webpack (начиная с 4-й версии) не требует никакой настройки, если вы соблюдаете эти правила:
 
-    *точкой входа вашего приложения является ./src/index.js
-    *вывод (output) размещается в ./dist/main.js
-    *Webpack работает в production mode (режим производства)
+* точкой входа вашего приложения является ./src/index.js
+* вывод (output) размещается в ./dist/main.js
+* Webpack работает в production mode (режим производства)
+
+Создадим папку *src* и файл *index.js*
+
+В *package.json* скрипт test исправим на:
+```json
+"build": "webpack --mode production"
+```
+В консоли:
+
+`npm run build` - и сгенерировалась папка *dist*, а в ней файл main.js
+
